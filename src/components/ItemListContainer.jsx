@@ -7,4 +7,4 @@ const ItemListContainer = ({titulo, texto}) =>{
     )
 }
 
-export default ItemListContainer
+export default ItemListContainer 

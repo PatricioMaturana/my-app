@@ -11,7 +11,7 @@ const Footer = () => {
                     <a href="https://cl.linkedin.com/in/giordano-bruno-705042168"><i className="fa-brands fa-linkedin"></i></a>
                     <p>Copyright© Todos los Derechos Reservados.</p>
                 </div>
-            </footer>
+            </footer> 
     )
 }
 

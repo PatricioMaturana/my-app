@@ -16,7 +16,7 @@ function App() {
       <Section />
       <Cargaproductos />
       <Footer />
-    </>
+    </> 
   )
 }
 

@@ -10,7 +10,7 @@ class Libro{
         this.cantidad = parseFloat(cantidad);
         this.stock  =   stock;
         this.numSerie  =   numSerie;
-        this.imagen =   imagen; 
+        this.imagen =   imagen;  
     }
 }
 

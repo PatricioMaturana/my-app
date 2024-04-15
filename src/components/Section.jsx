@@ -25,7 +25,7 @@ const Section = () => {
                             <strong>Total</strong>
                             <span className="precioTotal">
                                 $0.000,00
-                            </span>
+                            </span> 
                         </div>
                         <button className="btn-pagar" id="id-btnPagar">Confirmar y pagar <i className="fa-solid fa-bag-shopping"></i> 
                         
