@@ -39,12 +39,12 @@ p{
   background-color:#04AA6D;
   border: none;
   color: white;
-  padding: 5px 32px;
+  padding: 5px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 1px 1px;
+  margin: 1px 4px;
   cursor: pointer;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
@@ -238,7 +238,6 @@ p{
 .nav-link {
   color: orange;
   text-shadow: 0px 0px 10px rgba(219, 247, 7, 0.9215686275);
-  /*padding: 20px;*/
   background-color: #040D12;
   display: flex;
   justify-content: center;
