@@ -1,27 +1,46 @@
-import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import arregloLibros from "./json/Libros.json";
+import { useParams } from "react-router-dom";
+//import arregloLibros from "./json/LibrosOLD.json";
 import ItemDetail from "./ItemDetail";
+import { doc, getDoc, getFirestore, collection } from "firebase/firestore";
+
 
 const ItemDetailContainer = () =>{
-    const {id} = useParams();
     const [libro, setLibro] = useState();
+    const {id} = useParams();
+   
+  
+   useEffect(() => {
+    console.log("ItemDetailContiner", "0KQuUMz7AfaOcw26p4Vs");
+        const db = getFirestore();
+        const docRef = doc(db, "libros", "0KQuUMz7AfaOcw26p4Vs");
 
+        getDoc(docRef).then(snapShot => {
+            if (snapShot.exists()) {
+                setLibro({id:snapShot.id, ...snapShot.data()});
+            }
+           
+        });
+
+    }, [id]);
+
+/*
     useEffect(() => {
         const promesa = new Promise(completado => {
             setTimeout(() => {               
-                completado(arregloLibros.find(buscaLibro => buscaLibro.id == parseInt(id)) );
+                completado(arregloLibros.find(buscaLibro => buscaLibro.codigo_libro == parseInt(id)) );
             }, 2000)
+            setVisible(false);
         });
         
         promesa.then(respuesta => {
             setLibro(respuesta);
         })
     }, [id])
-
+*/
     return(
             <div>
-                <ItemDetail libro = {libro} />
+                <ItemDetail libro = {libro} /> 
             </div>
     )
 }
